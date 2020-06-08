@@ -25,7 +25,6 @@ routes.post(
 routes.use(authMiddleware)
 
 // Ads Routes
-
 routes.get('/ads', handle(controllers.AdController.index))
 routes.get('/ads/:id', handle(controllers.AdController.show))
 routes.post(
@@ -41,7 +40,6 @@ routes.put(
 routes.delete('/ads/:id', handle(controllers.AdController.destroy))
 
 // Purchase
-
 routes.post(
   '/purchases',
   validate(validators.Purchase),
